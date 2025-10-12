@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Section43Realty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+    <!-- Tailwind Play CDN (good for prototypes) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      :root {
+        --accent: #0b66ff;
+        --muted: #6b7280;
+      }
+      body {
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Baloo 2", cursive;
+      }
+    </style>
+  </head>
+  <body class="antialiased text-gray-800 bg-white">
+    <!-- NAV -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center gap-6">
+            <a href="#" class="flex items-center gap-2">
+              <img src="/images/logo.png" alt="logo" class="w-[12rem] object-contain" />
+            </a>
+          </div>
+          <div class="flex items-center gap-6">
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-700">
+              <a href="#about" class="hover:text-black">About</a>
+              <a href="#projects" class="hover:text-black">Projects</a>
+              <a href="#contact" class="hover:text-black">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+              <a href="#get-started" class="hidden md:inline-block px-4 font-semibold py-2 bg-blue-600 text-white rounded-md text-sm">Get Started</a>
+              <!-- mobile menu -->
+              <button id="mobileBtn" class="md:hidden p-2 rounded-md focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- mobile menu panel -->
+      <div id="mobileMenu" class="md:hidden hidden px-6 pb-6">
+        <div class="flex flex-col gap-3">
+          <a href="#about" class="py-2">About</a>
+          <a href="#projects" class="py-2">Projects</a>
+          <a href="#contact" class="py-2">Contact</a>
+          <a href="#get-started" class="mt-2 inline-block px-4 py-2 bg-blue-600 text-white rounded-md">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-gradient-to-b from-white to-slate-300">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8 pt-16 lg:pt-24 text-center">
+        <h1 class="text-4xl md:text-7xl leading-tight font-semibold text-gray-900">
+          Land used to be for<br class="hidden md:block" />
+          kings.<br />Now it's for anyone<br class="hidden md:block" />
+          with a <span class="text-red-500">vision</span>.
+        </h1>
+        <p class="mt-6 text-lg text-gray-500 max-w-2xl mx-auto">
+          If you can afford an iPhone, you can afford land. Section43Realty is on a mission to make land ownership clear, simple, and accessible.
+        </p>
+
+        <div class="mt-8 flex justify-center gap-4">
+          <a id="get-started" href="#projects" class="px-6 py-3 font-semibold bg-blue-600 text-white rounded-lg shadow">Get Started</a>
+          <a href="#" class="px-6 py-3 border border-red-400 rounded-lg flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 bg-red-600 rounded-full text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            <span class="text-sm font-semibold">Watch Video</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- big city image -->
+      <div class="mt-12">
+        <img src="/images/hero.png" alt="city skyline" class="w-full h-56 md:h-72 lg:h-[30rem] object-cover" />
+      </div>
+    </section>
+
+    <!-- TRENDING PROPERTIES -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <h2 class="text-3xl font-medium mb-6">Trending properties</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <article class="bg-white rounded-lg shadow p-4">
+          <img src="/images/property-1.png" alt="property 1" class="w-full h-72 object-cover rounded-md" />
+          <h3 class="mt-4 font-semibold">Lincoln City II</h3>
+          <h4 class="mb-2 text-sm text-gray-500">Agbowa-Ikosi, Ikorodu Road</h4>
+          <p class="text-sm text-gray-500 mt-2">
+            A picturesque location in a serene neighborhood, and has everything you need to accommodate a large group.
+          </p>
+        </article>
+
+        <article class="bg-white rounded-lg shadow p-4">
+          <img src="/images/property-2.png" alt="property 2" class="w-full h-72 object-cover rounded-md" />
+          <h3 class="mt-4 font-semibold">Green Acres III</h3>
+          <h4 class="mb-2 text-sm text-gray-500">Omu-Ketu, Ogun state</h4>
+          <p class="text-sm text-gray-500 mt-2">
+            The land is located in a serene neighbourhood, and has everything you need to accommodate a large group.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="bg-white border-t">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 py-14 flex flex-col justify-center items-center gap-8">
+        <h2 class="text-3xl font-medium">About Section43Realty</h2>
+        <div class="flex items-center gap-12">
+          <div>
+            <p class="text-gray-600">
+              Section43Realty is on a mission to make land ownership in Nigeria transparent, safe, and accessible for everyone. Inspired by Section 43
+              of the Nigerian Constitution — which guarantees every citizen the right to own property anywhere in the country — we are building a new
+              kind of real estate brand.
+            </p>
+          </div>
+          <div>
+            <p class="text-gray-600">
+              A brand that stands for trust, simplicity, and community empowerment, not hidden fees, fake documents, or confusion. Whether you're
+              buying your first plot or securing land for your family's future, Section43Realty is here to make the process clear and reliable — every
+              step of the way.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="bg-[#FAFAFA] w-full">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+        <h3 class="text-3xl font-medium text-center">Our Exceptional Values</h3>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg p-6 shadow text-center">
+            <img src="/images/value-1.png" alt="trust" class="mx-auto w-full h-36 object-cover rounded-md" />
+            <h4 class="mt-4 font-semibold">Trust</h4>
+            <p class="text-sm text-gray-500 mt-2">No hidden fees, no fake documents. Every transaction is transparent and verified.</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow text-center">
+            <img src="/images/value-2.png" alt="simplicity" class="mx-auto w-full h-36 object-cover rounded-md" />
+            <h4 class="mt-4 font-semibold">Simplicity</h4>
+            <p class="text-sm text-gray-500 mt-2">Land ownership should be clear and straightforward — not confusing and complicated.</p>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow text-center">
+            <img src="/images/value-3.png" alt="community" class="mx-auto w-full h-36 object-cover rounded-md" />
+            <h4 class="mt-4 font-semibold">Community</h4>
+            <p class="text-sm text-gray-500 mt-2">Empowering every Nigerian to own property and build generational wealth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <h3 class="text-3xl text-center font-medium">Clients spill the beans; their <span class="text-red-500">love</span> for us!</h3>
+      <p class="text-center text-sm text-gray-500 mt-2">Real stories from Nigerians who trusted us with their property dreams.</p>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-[#FAFAFA] rounded-lg p-6 shadow">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center">C</div>
+            <div>
+              <div class="font-semibold">Chioma Okafor</div>
+              <div class="text-xs text-gray-500">Lagos, Nigeria</div>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-gray-600">
+            I bought my first plot of land through Section43Realty. No stress, no hidden charges — everything was clear from start to finish.
+          </p>
+        </div>
+
+        <div class="bg-[#FAFAFA] rounded-lg p-6 shadow">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center">A</div>
+            <div>
+              <div class="font-semibold">Adebayo Mensah</div>
+              <div class="text-xs text-gray-500">Ibadan, Nigeria</div>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-gray-600">
+            As a young professional, I thought land ownership was out of reach. Section43Realty proved me wrong — transparent, secure, and accessible.
+          </p>
+        </div>
+
+        <div class="bg-[#FAFAFA] rounded-lg p-6 shadow">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center">F</div>
+            <div>
+              <div class="font-semibold">Funmi Adeeko</div>
+              <div class="text-xs text-gray-500">Ogun state, Nigeria</div>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-gray-600">The team was very patient and helped me through every step — highly recommend.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING -->
+    <section id="projects" class="bg-[#FAFAFA] py-12">
+      <div class="max-w-2xl mx-auto px-6 text-center">
+        <h4 class="text-2xl font-medium">Upcoming Projects</h4>
+        <div class="border border-blue-500 rounded-lg mx-auto my-3 w-fit py-2 px-4 border-b-2 text-lg text-blue-500 font-normal">
+          🚀 Launching soon
+        </div>
+        <p class="text-sm text-gray-500 mt-2">
+          We're preparing something special. Stay tuned for our upcoming land projects that will redefine affordable land ownership in Nigeria.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-20 text-center">
+      <h3 class="text-2xl font-medium">Ready to buy a land, or build a custom home?</h3>
+      <p class="text-sm text-gray-500 mt-3">Start your journey towards home ownership today and discover the endless possibilities that await you.</p>
+      <a href="#contact" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg">Get Started</a>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-[#FAFAFA] py-12">
+      <div class="text-center">
+        <h3 class="text-3xl font-semibold">Contact Us</h3>
+        <p class="text-sm text-gray-500 mt-3">Let's Make Your Property Ownership Dreams a Reality</p>
+      </div>
+      <div class="max-w-3xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow text-center">
+          <img src="/images/phone.png" alt="icon" class="w-6 mx-auto mb-4 object-contain" />
+          <div class="text-xl font-semibold mb-2">Call Us</div>
+          <a href="#" class="text-sm text-blue-500 mt-7">0803 829 2457<br />0805 778 8939</a>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow text-center">
+          <img src="/images/mail.png" alt="icon" class="w-6 mx-auto mb-4 object-contain" />
+          <div class="text-xl font-semibold mb-2">Email Us</div>
+          <a href="#" class="text-sm text-blue-500 mt-7">info@section43.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#1A1A1A] text-gray-200 mt-10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10 flex flex-col md:flex-row justify-between gap-6">
+        <div>
+          <img src="/images/logo.png" alt="logo image" class="w-[13rem] object-contain" />
+          <p class="mt-4 text-sm text-gray-400">Making property ownership accessible for every Nigerian.</p>
+        </div>
+
+        <div class="flex gap-12">
+          <div>
+            <h5 class="font-semibold">Discover</h5>
+            <ul class="mt-3 text-sm text-gray-400">
+              <li class="mt-2">About Us</li>
+              <li class="mt-2">Upcoming Projects</li>
+              <li class="mt-2">Contact</li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-semibold">Connect</h5>
+            <div class="flex gap-3 mt-3">
+              <a href="#" aria-label="linkedin" class="bg-[#333333] w-fit h-fit p-[.6rem] rounded-full"
+                ><img src="/images/icon-l.svg" alt="icon"
+              /></a>
+              <a href="#" aria-label="linkedin" class="bg-[#333333] w-fit h-fit p-[.6rem] rounded-full"
+                ><img src="/images/icon-i.svg" alt="icon"
+              /></a>
+              <a href="#" aria-label="linkedin" class="bg-[#333333] w-fit h-fit rounded-full"><img src="/images/iconx.png" alt="icon" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 text-center py-4 text-sm text-gray-500">© 2025 Section43Realty</div>
+    </footer>
+
+    <script>
+      // mobile menu toggle
+      const btn = document.getElementById("mobileBtn");
+      const menu = document.getElementById("mobileMenu");
+      btn?.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
