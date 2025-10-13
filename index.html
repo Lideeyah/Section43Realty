@@ -42,6 +42,17 @@
         transform: translateY(0);
         max-height: 400px; /* enough height for menu content */
       }
+
+      /* Fade up animation */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .fade-up.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
   </head>
   <body class="antialiased text-gray-800 bg-white">
@@ -84,7 +95,7 @@
     </header>
 
     <!-- HERO -->
-    <section class="">
+    <section class="fade-up">
       <div class="max-w-2xl sm:px-0 px-10 mx-auto pt-16 lg:pt-24 text-center">
         <h1 class="text-4xl md:text-6xl md:max-w-full max-w-xl leading-tight tracking-relaxed font-semibold text-gray-900">
           Land used to be for<br class="hidden md:block" />
@@ -98,7 +109,7 @@
     </section>
 
     <!-- big city image -->
-    <div class="relative">
+    <div class="relative fade-up">
       <div class="">
         <div class="flex justify-center pt-6 gap-4">
           <a
@@ -122,7 +133,7 @@
     </div>
 
     <!-- TRENDING PROPERTIES -->
-    <section class="bg-[#FAFAFA] w-full">
+    <section class="bg-[#FAFAFA] w-full fade-up">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         <h2 class="text-3xl font-semibold mb-6">Trending properties</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -136,7 +147,7 @@
           </article>
 
           <article class="bg-white rounded-lg shadow p-4">
-            <img loading="lazy" src="/images/property-2.png" alt="property 2" class="w-full h-72 object-cover rounded-md" />
+            <img loading="lazy" src="/images/property-2.jpg" alt="property 2" class="w-full h-72 object-cover rounded-md" />
             <h3 class="mt-4 font-semibold">Green Acres III</h3>
             <h4 class="mb-2 text-sm text-gray-500">Omu-Ketu, Ogun state</h4>
             <p class="text-sm text-gray-500 mt-2">
@@ -148,7 +159,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="bg-white">
+    <section id="about" class="bg-white fade-up">
       <div class="max-w-4xl mx-auto px-6 lg:px-8 py-14 flex flex-col justify-center items-center gap-8">
         <h2 class="text-3xl font-semibold">About Section43Realty</h2>
         <div class="flex items-center md:flex-nowrap flex-wrap gap-12">
@@ -171,7 +182,7 @@
     </section>
 
     <!-- VALUES -->
-    <section class="bg-[#FAFAFA] w-full">
+    <section class="bg-[#FAFAFA] w-full fade-up">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         <h3 class="text-3xl font-semibold text-center">Our Exceptional Values</h3>
         <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -184,7 +195,7 @@
           <div class="bg-white rounded-lg p-6 shadow text-center">
             <img loading="lazy" src="/images/value-2.png" alt="simplicity" class="mx-auto w-full h-36 object-cover rounded-md" />
             <h4 class="mt-4 font-semibold">Simplicity</h4>
-            <p class="text-sm text-gray-500 mt-2">Land ownership should be clear and straightforward — not confusing and complicated.</p>
+            <p class="text-sm text-gray-500 mt-2">Land ownership should be clear and straightforward; not confusing and complicated.</p>
           </div>
 
           <div class="bg-white rounded-lg p-6 shadow text-center">
@@ -197,7 +208,7 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-16 fade-up">
       <h3 class="text-3xl text-center font-semibold">
         Clients Spill the Beans; Their <span class="text-red-500">Love</span>
         for Us!
@@ -214,7 +225,7 @@
             </div>
           </div>
           <p class="mt-4 text-sm text-gray-600">
-            I bought my first plot of land through Section43Realty. No stress, no hidden charges — everything was clear from start to finish.
+            I bought my first plot of land through Section43Realty. No stress, no hidden charges; everything was clear from start to finish.
           </p>
         </div>
 
@@ -227,7 +238,7 @@
             </div>
           </div>
           <p class="mt-4 text-sm text-gray-600">
-            As a young professional, I thought land ownership was out of reach. Section43Realty proved me wrong — transparent, secure, and accessible.
+            As a young professional, I thought land ownership was out of reach. Section43Realty proved me wrong; transparent, secure, and accessible.
           </p>
         </div>
 
@@ -239,13 +250,13 @@
               <div class="text-xs text-gray-500">Ogun state, Nigeria</div>
             </div>
           </div>
-          <p class="mt-4 text-sm text-gray-600">The team was very patient and helped me through every step — highly recommend.</p>
+          <p class="mt-4 text-sm text-gray-600">The team was very patient and helped me through every step; highly recommend.</p>
         </div>
       </div>
     </section>
 
     <!-- UPCOMING -->
-    <section id="projects" class="bg-[#FAFAFA] py-16">
+    <section id="projects" class="bg-[#FAFAFA] py-16 fade-up">
       <div class="max-w-2xl mx-auto px-6 text-center">
         <h4 class="text-2xl font-semibold">Upcoming Projects</h4>
         <div class="border border-blue-500 rounded-lg mx-auto my-8 w-fit py-2 px-4 border-b-2 text-sm text-blue-500 font-normal">
@@ -258,14 +269,14 @@
     </section>
 
     <!-- CTA -->
-    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-16 text-center">
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-16 text-center fade-up">
       <h3 class="text-2xl font-semibold">Ready to Buy a Land, or Build a Custom Home?</h3>
       <p class="text-sm text-gray-500 mt-3">Start your journey towards home ownership today and discover the endless possibilities that await you.</p>
       <a href="#contact" class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg">Get Started</a>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="bg-[#FAFAFA] py-16">
+    <section id="contact" class="bg-[#FAFAFA] py-16 fade-up">
       <div class="text-center">
         <h3 class="text-3xl font-semibold">Contact Us</h3>
         <p class="text-sm text-gray-500 mt-3">Let's Make Your Property Ownership Dreams a Reality</p>
@@ -326,6 +337,24 @@
       const menu = document.getElementById("mobileMenu");
       btn?.addEventListener("click", () => {
         menu.classList.toggle("open");
+      });
+
+      // Fade up animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-up").forEach((el) => {
+        observer.observe(el);
       });
     </script>
   </body>
